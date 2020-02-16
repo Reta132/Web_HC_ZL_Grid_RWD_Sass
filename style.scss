@@ -1,259 +1,298 @@
-$gray:#333;
-$pink:#F17B97;
-$footpink:#FED5D5;
-$white:#fff;
+$gray: #333;
+$pink: #f17b97;
+$footpink: #fed5d5;
+$white: #fff;
 
 * {
-    margin: 0;
-    padding: 0;
-    font-family: 微軟正黑體;
-    box-sizing: border-box;
-    color: $white;
+	margin: 0;
+	padding: 0;
+	font-family: 微軟正黑體;
+	box-sizing: border-box;
+	color: $white;
 }
 
 // 橫幅
 #banner {
-    height: 100vh;
-    background-image: url(./img/banner.jpg);
-    background-size: cover;
-    margin-top: -100px;
-    display: grid;
-    align-items: center;
+	height: 100vh;
+	background-image: url(./img/banner.jpg);
+	background-size: cover;
+	margin-top: -100px;
+	display: grid;
+	align-items: center;
 
-    div{
-        width: 800px;
-        margin: 0 auto;
-        text-align: center;
+	div {
+		width: 800px;
+		margin: 0 auto;
+		text-align: center;
 
-        h1{
-            font-size: 50pt;
-        }
+		h1 {
+			font-size: 50pt;
+		}
 
-        h2{
-            padding: 10px 0;
-        }
-    }
+		h2 {
+			padding: 10px 0;
+		}
+	}
 }
 
 // 文章
-.content{
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 30px;
+.content {
+	max-width: 1200px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	padding: 30px;
 
-    *{
-      color: $gray;
-    }
+	* {
+		color: $gray;
+	}
 
-    .pic{
-        grid-area: pic;
-        text-align: center;
-    }
+	.pic {
+		grid-area: pic;
+		text-align: center;
+	}
 
-    .text{
-        grid-area: text-con;
-        display: grid;
-        align-items: center;
+	.text {
+		grid-area: text-con;
+		display: grid;
+		align-items: center;
 
-        h1{
-            color: $pink;
-            font-size: 18pt;
-        }
-        p{
-            margin: 20px 0 30px 0;
-            line-height: 1.5;
-            font-size: 14pt;
+		h1 {
+			color: $pink;
+			font-size: 18pt;
+		}
+		p {
+			margin: 20px 0 30px 0;
+			line-height: 1.5;
+			font-size: 14pt;
+		}
+		a {
+			text-decoration: none;
+			border: 2px solid $pink;
+			border-radius: 30px;
+			padding: 8px 20px;
+			transform: 0.8s;
 
-        }
-        a{
-            text-decoration: none;
-            border: 2px solid $pink;
-            border-radius: 30px;
-            padding: 8px 20px;
-            transform: 0.8s;
-
-            &:hover{
-                background-color: $pink;
-                color: $white;
-            }
-
-        }
-
-    }
+			&:hover {
+				background-color: $pink;
+				color: $white;
+			}
+		}
+	}
 }
-#con1, #con3{
-    grid-template-areas: 'pic text-con';
+#con1,
+#con3 {
+	grid-template-areas: "pic text-con";
 }
-#con2{
-    grid-template-areas: 'text-con pic';
+#con2 {
+	grid-template-areas: "text-con pic";
 }
 
 //導覽列
 nav {
-    display: grid;
-    grid-template-columns: auto 80px auto;
-    text-align: center;
-    position: sticky;
-    top: 0;
-    height: 100px;
-    // 使用格線可讓內容垂直對齊
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    background-color: rgba(0,0,0,0.25);
-    background-size: 100%;
+	display: grid;
+	grid-template-columns: auto 80px auto;
+	text-align: center;
+	position: sticky;
+	top: 0;
+	height: 100px;
+	// 使用格線可讓內容垂直對齊
+	align-items: center;
+	max-width: 1200px;
+	margin: 0 auto;
+	background-color: rgba(0, 0, 0, 0.25);
+	background-size: 100%;
 
-    ul {
-        list-style: none;
+	ul {
+		list-style: none;
 
-        li {
-            display: inline-block;
-            transition: 0.5s;
+		li {
+			display: inline-block;
+			transition: 0.5s;
 
-            a {
-                text-decoration: none;
-                color: $white;
-                padding: 15px;
-                font-weight: 900;
-            }
+			a {
+				text-decoration: none;
+				color: $white;
+				padding: 15px;
+				font-weight: 900;
+			}
 
-            &:hover {
-                transform: scale(1.2);
-            }
-        }
-    }
+			&:hover {
+				transform: scale(1.2);
+			}
+		}
+	}
 
-    img {
-        width: 80px;
-        transition: 0.5s;
-        transform: scaleX(-1);
+	img {
+		width: 80px;
+		transition: 0.5s;
+		transform: scaleX(-1);
 
-        &:hover {
-            transform: scaleX(-1.2) scaleY(1.2);
-        }
-    }
+		&:hover {
+			transform: scaleX(-1.2) scaleY(1.2);
+		}
+	}
 }
 
 //圖示
-#icon{
-    background-color: rgba(0,0,0,0.08);
-    padding: 50px 0;
-    
-    *{color: $gray;}
+#icon {
+	background-color: rgba(0, 0, 0, 0.08);
+	padding: 50px 0;
 
-    div{
-        display: grid;
-        grid-template-columns: repeat(6,1fr);
-        max-width: 1200px;
-        margin: 0 auto;
+	* {
+		color: $gray;
+	}
 
-        div{
-            display: block;
-            padding: 5px 0;
-            text-align: center;
+	div {
+		display: grid;
+		grid-template-columns: repeat(6, 1fr);
+		max-width: 1200px;
+		margin: 0 auto;
 
-            img{
-                display: block;
-                width: 75px;
-            }
-            span{
-                display: block;
-                padding: 15px 0;
-                font-size: 12pt;
-            }
-            
-            &:hover img{
-                filter: invert(62%) sepia(2%) saturate(5521%) hue-rotate(300deg) brightness(96%) contrast(106%);
-            }
-            &:hover span{
-                color: $pink;
-            }
-        }
-    }
+		div {
+			display: block;
+			padding: 5px 0;
+			text-align: center;
+
+			img {
+				display: block;
+				width: 75px;
+			}
+			span {
+				display: block;
+				padding: 15px 0;
+				font-size: 12pt;
+			}
+
+			&:hover img {
+				filter: invert(62%) sepia(2%) saturate(5521%) hue-rotate(300deg)
+					brightness(96%) contrast(106%);
+			}
+			&:hover span {
+				color: $pink;
+			}
+		}
+	}
 }
 
 //footer
-footer{
-    background-color: $footpink;
-    text-align: center;
+footer {
+	background-color: $footpink;
+	text-align: center;
 
-    img{
-        width: 15%;
-        filter: invert(16%) sepia(10%) saturate(3863%) hue-rotate(325deg) brightness(96%) contrast(92%);
-    }
+	img {
+		width: 15%;
+		filter: invert(16%) sepia(10%) saturate(3863%) hue-rotate(325deg)
+			brightness(96%) contrast(92%);
+	}
 }
 
 //menu
-#menu{
-    display: none;
-    position: fixed;
-    top: 0;
-    right: 0;
-    margin: 10px;
-    cursor: pointer;
+#menu {
+	display: none;
+	position: fixed;
+	top: 0;
+	right: 0;
+	margin: 10px;
+	cursor: pointer;
+
+	img {
+		filter: invert(1);
+		width: 70px;
+    }
     
-    img{
-        filter: invert(1);
-        width: 70px;
+    .current {
+        background-color: $pink;
+        display: inline-block;
+        width: 100%;
+        padding: 10px 20px;
+        border-radius: 30px;
+        text-align: center;
+        color: #fff !important;
     }
 
-    #menu-item{
-        background-color: rgba(250,250,250,0.9);
-        position: absolute;
-        top: 0;
-        right: -510px;
-        width: 500px;
-        transition: 0.5s;
 
-        ul{
-            padding: 15px;
-            li{
-                list-style: none;
-                padding: 15px;
-                cursor: pointer;
+	#menu-item {
+		background-color: rgba(250, 250, 250, 0.9);
+		position: absolute;
+		top: 0;
+		right: -510px;
+		width: 500px;
+		transition: 0.5s;
 
-                a{
-                    text-decoration: none;
-                    font-size: 36pt;
-                    color: $gray;
-                }
-            }
-        }
-    }
+		ul {
+			padding: 15px;
+			li {
+				list-style: none;
+				padding: 15px;
+				cursor: pointer;
 
-    &:active #menu-item{
-        right:0
-    }
+				a {
+					text-decoration: none;
+					font-size: 36pt;
+					color: $gray;
+				}
+			}
+		}
+	}
 
-    &:hover #menu-item{
-        right:0
-    }
+	&:active #menu-item {
+		right: 0;
+	}
+
+	&:hover #menu-item {
+		right: 0;
+	}
 }
-
 
 //ph
 @media (max-width: 768px) {
-
 }
 
 //ipad
 @media (min-width: 769px) {
-    #menu{
-        display: block;
+	#menu {
+		display: block;
+	}
+
+	nav {
+		grid-template-columns: auto;
+
+		ul {
+			display: none;
+		}
+	}
+
+	#con1,#con2,#con3 {
+        //""一列
+        //"" ""兩列
+        grid-template-areas: "text-con" "pic";
+        grid-template-columns: 1fr;
     }
+    
+    .pic{
+        text-align: center;
+    }
+    .text{
+        padding: 0 100px;
 
-    nav{
-        grid-template-columns: auto;
-
-        ul{
-            display: none;
+        div{
+            h1{
+                font-size: 20pt;
+            }
+            p{
+                font-size: 16pt;
+            }
         }
+        }
+    
+    #icon{
+        div{
+        grid-template-columns: repeat(4,1fr);
+    }
     }
 }
 
 //com
 @media (min-width: 1025px) {
-
 }

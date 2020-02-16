@@ -67,7 +67,7 @@
 }
 
 .content .text h1 {
-  color: #F17B97;
+  color: #f17b97;
   font-size: 18pt;
 }
 
@@ -79,7 +79,7 @@
 
 .content .text a {
   text-decoration: none;
-  border: 2px solid #F17B97;
+  border: 2px solid #f17b97;
   border-radius: 30px;
   padding: 8px 20px;
   -webkit-transform: 0.8s;
@@ -87,16 +87,17 @@
 }
 
 .content .text a:hover {
-  background-color: #F17B97;
+  background-color: #f17b97;
   color: #fff;
 }
 
-#con1, #con3 {
-      grid-template-areas: 'pic text-con';
+#con1,
+#con3 {
+      grid-template-areas: "pic text-con";
 }
 
 #con2 {
-      grid-template-areas: 'text-con pic';
+      grid-template-areas: "text-con pic";
 }
 
 nav {
@@ -194,11 +195,11 @@ nav img:hover {
 }
 
 #icon div div:hover span {
-  color: #F17B97;
+  color: #f17b97;
 }
 
 footer {
-  background-color: #FED5D5;
+  background-color: #fed5d5;
   text-align: center;
 }
 
@@ -221,6 +222,16 @@ footer img {
   -webkit-filter: invert(1);
           filter: invert(1);
   width: 70px;
+}
+
+#menu .current {
+  background-color: #f17b97;
+  display: inline-block;
+  width: 100%;
+  padding: 10px 20px;
+  border-radius: 30px;
+  text-align: center;
+  color: #fff !important;
 }
 
 #menu #menu-item {
@@ -267,6 +278,27 @@ footer img {
   }
   nav ul {
     display: none;
+  }
+  #con1, #con2, #con3 {
+        grid-template-areas: "text-con" "pic";
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .pic {
+    text-align: center;
+  }
+  .text {
+    padding: 0 100px;
+  }
+  .text div h1 {
+    font-size: 20pt;
+  }
+  .text div p {
+    font-size: 16pt;
+  }
+  #icon div {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
   }
 }
 /*# sourceMappingURL=style.css.map */
