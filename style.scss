@@ -199,18 +199,17 @@ footer {
 	img {
 		filter: invert(1);
 		width: 70px;
-    }
-    
-    .current {
-        background-color: $pink;
-        display: inline-block;
-        width: 100%;
-        padding: 10px 20px;
-        border-radius: 30px;
-        text-align: center;
-        color: #fff !important;
-    }
+	}
 
+	.current {
+		background-color: $pink;
+		display: inline-block;
+		width: 100%;
+		padding: 10px 20px;
+		border-radius: 30px;
+		text-align: center;
+		color: #fff !important;
+	}
 
 	#menu-item {
 		background-color: rgba(250, 250, 250, 0.9);
@@ -247,6 +246,63 @@ footer {
 
 //ph
 @media (max-width: 768px) {
+    #menu {
+		display: block;
+	}
+
+	nav {
+		grid-template-columns: auto;
+
+		ul {
+			display: none;
+		}
+	}
+
+	#con1,
+	#con2,
+	#con3 {
+		//""一列
+		//"" ""兩列
+		grid-template-areas: "text-con" "pic";
+		grid-template-columns: 1fr;
+	}
+
+	.pic {
+		text-align: center;
+	}
+	.text {
+		padding: 0 100px;
+	}
+
+	#icon {
+		div {
+			grid-template-columns: repeat(4, 1fr);
+		}
+    }
+    
+    #menu-item {
+		background-color: rgba(250, 250, 250, 0.9);
+		position: absolute;
+		top: 0;
+		right: -200px;
+		width: 200px;
+		transition: 0.5s;
+
+		ul {
+			padding: 5px;
+			li {
+				list-style: none;
+				padding: 5px;
+				cursor: pointer;
+
+				a {
+					text-decoration: none;
+					font-size: 12pt;
+					color: $gray;
+				}
+			}
+		}
+	}
 }
 
 //ipad
@@ -263,34 +319,27 @@ footer {
 		}
 	}
 
-	#con1,#con2,#con3 {
-        //""一列
-        //"" ""兩列
-        grid-template-areas: "text-con" "pic";
-        grid-template-columns: 1fr;
-    }
-    
-    .pic{
-        text-align: center;
-    }
-    .text{
-        padding: 0 100px;
+	#con1,
+	#con2,
+	#con3 {
+		//""一列
+		//"" ""兩列
+		grid-template-areas: "text-con" "pic";
+		grid-template-columns: 1fr;
+	}
 
-        div{
-            h1{
-                font-size: 20pt;
-            }
-            p{
-                font-size: 16pt;
-            }
-        }
-        }
-    
-    #icon{
-        div{
-        grid-template-columns: repeat(4,1fr);
-    }
-    }
+	.pic {
+		text-align: center;
+	}
+	.text {
+		padding: 0 100px;
+	}
+
+	#icon {
+		div {
+			grid-template-columns: repeat(4, 1fr);
+		}
+	}
 }
 
 //com
