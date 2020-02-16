@@ -1,9 +1,14 @@
+$gray:#333;
+$pink:#F17B97;
+$footpink:#FED5D5;
+$white:#fff;
+
 * {
     margin: 0;
     padding: 0;
     font-family: 微軟正黑體;
     box-sizing: border-box;
-    color: #fff;
+    color: $white;
 }
 
 // 橫幅
@@ -39,7 +44,7 @@
     padding: 30px;
 
     *{
-      color:#333;
+      color: $gray;
     }
 
     .pic{
@@ -53,7 +58,7 @@
         align-items: center;
 
         h1{
-            color: #F17B97;
+            color: $pink;
             font-size: 18pt;
         }
         p{
@@ -64,14 +69,14 @@
         }
         a{
             text-decoration: none;
-            border: 2px solid #F17B97;
+            border: 2px solid $pink;
             border-radius: 30px;
             padding: 8px 20px;
             transform: 0.8s;
 
             &:hover{
-                background-color: #F17B97;
-                color: #FFF;
+                background-color: $pink;
+                color: $white;
             }
 
         }
@@ -109,7 +114,7 @@ nav {
 
             a {
                 text-decoration: none;
-                color: #fff;
+                color: $white;
                 padding: 15px;
                 font-weight: 900;
             }
@@ -136,7 +141,7 @@ nav {
     background-color: rgba(0,0,0,0.08);
     padding: 50px 0;
     
-    *{color: #333;}
+    *{color: $gray;}
 
     div{
         display: grid;
@@ -158,6 +163,61 @@ nav {
                 padding: 15px 0;
                 font-size: 12pt;
             }
+            
+            &:hover img{
+                filter: invert(62%) sepia(2%) saturate(5521%) hue-rotate(300deg) brightness(96%) contrast(106%);
+            }
+            &:hover span{
+                color: $pink;
+            }
         }
     }
+}
+
+//footer
+footer{
+    background-color: $footpink;
+    text-align: center;
+
+    img{
+        width: 15%;
+        filter: invert(16%) sepia(10%) saturate(3863%) hue-rotate(325deg) brightness(96%) contrast(92%);
+    }
+}
+
+//menu
+#menu{
+    display: none;
+}
+
+
+//ph
+@media (max-width: 768px) {
+
+}
+
+//ipad
+@media (min-width: 769px) {
+    nav{
+        grid-template-columns: auto;
+
+        ul{
+            display: none;
+        }
+        #menu{
+            display: block;
+            position: fixed;
+            top: 0;
+            right: 0;
+            margin: 10px;
+            filter: invert(1);
+            cursor: pointer;
+            width: 70px;
+        }
+    }
+}
+
+//com
+@media (min-width: 1025px) {
+
 }
