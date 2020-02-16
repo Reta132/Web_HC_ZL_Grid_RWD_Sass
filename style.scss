@@ -188,6 +188,48 @@ footer{
 //menu
 #menu{
     display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 10px;
+    cursor: pointer;
+    
+    img{
+        filter: invert(1);
+        width: 70px;
+    }
+
+    #menu-item{
+        background-color: rgba(250,250,250,0.9);
+        position: absolute;
+        top: 0;
+        right: -510px;
+        width: 500px;
+        transition: 0.5s;
+
+        ul{
+            padding: 15px;
+            li{
+                list-style: none;
+                padding: 15px;
+                cursor: pointer;
+
+                a{
+                    text-decoration: none;
+                    font-size: 36pt;
+                    color: $gray;
+                }
+            }
+        }
+    }
+
+    &:active #menu-item{
+        right:0
+    }
+
+    &:hover #menu-item{
+        right:0
+    }
 }
 
 
@@ -198,21 +240,15 @@ footer{
 
 //ipad
 @media (min-width: 769px) {
+    #menu{
+        display: block;
+    }
+
     nav{
         grid-template-columns: auto;
 
         ul{
             display: none;
-        }
-        #menu{
-            display: block;
-            position: fixed;
-            top: 0;
-            right: 0;
-            margin: 10px;
-            filter: invert(1);
-            cursor: pointer;
-            width: 70px;
         }
     }
 }
