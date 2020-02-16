@@ -12,8 +12,80 @@
     background-image: url(./img/banner.jpg);
     background-size: cover;
     margin-top: -100px;
+    display: grid;
+    align-items: center;
+
+    div{
+        width: 800px;
+        margin: 0 auto;
+        text-align: center;
+
+        h1{
+            font-size: 50pt;
+        }
+
+        h2{
+            padding: 10px 0;
+        }
+    }
 }
 
+// 文章
+.content{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 30px;
+
+    *{
+      color:#333;
+    }
+
+    .pic{
+        grid-area: pic;
+        text-align: center;
+    }
+
+    .text{
+        grid-area: text-con;
+        display: grid;
+        align-items: center;
+
+        h1{
+            color: #F17B97;
+            font-size: 18pt;
+        }
+        p{
+            margin: 20px 0 30px 0;
+            line-height: 1.5;
+            font-size: 14pt;
+
+        }
+        a{
+            text-decoration: none;
+            border: 2px solid #F17B97;
+            border-radius: 30px;
+            padding: 8px 20px;
+            transform: 0.8s;
+
+            &:hover{
+                background-color: #F17B97;
+                color: #FFF;
+            }
+
+        }
+
+    }
+}
+#con1, #con3{
+    grid-template-areas: 'pic text-con';
+}
+#con2{
+    grid-template-areas: 'text-con pic';
+}
+
+//導覽列
 nav {
     display: grid;
     grid-template-columns: auto 80px auto;
@@ -53,6 +125,36 @@ nav {
 
         &:hover {
             transform: scaleX(-1.2) scaleY(1.2);
+        }
+    }
+}
+
+//圖示
+#icon{
+    background-color: rgba(0,0,0,0.08);
+    
+    *{color: #333;}
+
+    div{
+        display: grid;
+        grid-template-columns: repeat(6,1fr);
+        max-width: 1200px;
+        margin: 0 auto;
+
+        div{
+            display: block;
+            padding: 20px 0;
+            text-align: center;
+
+            img{
+                display: block;
+                width: 75px;
+            }
+            span{
+                display: block;
+                padding: 20px 0;
+                font-size: 12pt;
+            }
         }
     }
 }
