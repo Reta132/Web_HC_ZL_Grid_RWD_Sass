@@ -97,6 +97,8 @@ nav {
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
+    background-color: rgba(0,0,0,0.25);
+    background-size: 100%;
 
     ul {
         list-style: none;
@@ -132,6 +134,7 @@ nav {
 //圖示
 #icon{
     background-color: rgba(0,0,0,0.08);
+    padding: 50px 0;
     
     *{color: #333;}
 
@@ -143,7 +146,7 @@ nav {
 
         div{
             display: block;
-            padding: 20px 0;
+            padding: 5px 0;
             text-align: center;
 
             img{
@@ -152,7 +155,7 @@ nav {
             }
             span{
                 display: block;
-                padding: 20px 0;
+                padding: 15px 0;
                 font-size: 12pt;
             }
         }
